@@ -1,0 +1,14 @@
+<h1>My First Angular 2 App</h1>
+<div>
+	<p>Hello, {{currentUser.username}}!</p>
+	
+	<p *ngIf="!hideEmail">Your email is: <em>{{currentUser.email}}</em></p>
+	
+	<button (click)="toggle()">Toggle(click)</button>
+</div>
+
+<ul>
+	<li *ngFor="#user of users, #i=index">
+		({{i+1}}) {{user.username}} - <em>{{user.email}}</em>
+	</li>
+</ul>

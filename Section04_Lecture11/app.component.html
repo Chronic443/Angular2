@@ -1,0 +1,16 @@
+<h1>My First Angular 2 App</h1>
+<div>
+	<p>Hello, {{currentUser.username}}!</p>
+	<p [hidden]='hideEmail'>Your email is: <em>{{currentUser.email}}</em></p>
+</div>
+
+<input [disabled]="disabledInput" type="text" placeholder="Enter your text">
+
+<input [disabled]="isDisabled()" type="text" placeholder="Enter your text">
+
+<input [disabled]="disabledInput" type="text" [value]="currentUser.username" placeholder="Enter your text">
+
+<input [class.blue-bg]="isBlueBg" type="text" placeholder="Enter your text">
+
+<input [style.background-color]="bgColor" type="text" placeholder="Enter your text">
+

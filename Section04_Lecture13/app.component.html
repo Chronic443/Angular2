@@ -1,0 +1,11 @@
+<h1>My First Angular 2 App</h1>
+<div>
+	<p>Hello, {{currentUser.username}}!</p>
+	
+	<p [hidden]='hideEmail'>Your email is: <em>{{currentUser.email}}</em></p>
+	
+	<button (click)="toggle()">Toggle(click)</button>
+	
+</div>
+
+<button (mouseleave)="toggle()">Toggle(mouseleave)</button>

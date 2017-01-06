@@ -1,0 +1,42 @@
+<h1>My First Angular 2 App</h1>
+<div>
+	<p>Hello, {{currentUser.username}}!</p>
+	
+	<p [hidden]='hideEmail'>Your email is: <em>{{currentUser.email}}</em></p>
+	
+	<button (click)="toggle()">Toggle(click)</button>
+</div>
+
+<div>
+	<input type="text" #a>
+	
+	<p>Value of input is: {{a.value}}</p>
+</div>
+
+<div>
+	<input type="text" #b (keyup)="0">
+	
+	<p>Value of input is: {{b.value}}</p>
+</div>
+
+<div>
+	<h3>Change email:</h3>
+	<input type="text" name="name" #newMail>
+	
+	<button (click)="changeMail(newMail.value)">Change</button>
+</div>
+
+<div>
+	<h3>Change email:</h3>
+	<input type="text" #newMail2 (keyup)="keyPress($event)">
+	
+	<button (click)="changeMail(newMail2.value)">Change</button>
+</div>
+
+<div>
+	<h3>Change email:</h3>
+	<input type="text" #newMail3 (keyup.enter)="changeMail(newMail3.value)">
+	<button (click)="changeMail(newMail3.value)">Change</button>
+</div>
+
+<button (mouseleave)="toggle()">Toggle(mouseleave)</button>
